@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090909">
+<meta name="description" content="Ashar Creative Studio - Professional Graphic Designing and Printing Solutions.">
 
 <title>Ashar Creative Studio</title>
 
@@ -20,7 +22,6 @@ body{
   color:#fff;
 }
 
-/* NAVBAR */
 header{
   position:sticky;
   top:0;
@@ -44,9 +45,7 @@ nav{
   color:#d4af37;
 }
 
-.logo span{
-  color:#fff;
-}
+.logo span{color:#fff;}
 
 nav ul{
   list-style:none;
@@ -59,11 +58,8 @@ nav a{
   text-decoration:none;
 }
 
-nav a:hover{
-  color:#d4af37;
-}
+nav a:hover{color:#d4af37;}
 
-/* GENERAL */
 .container{
   max-width:1150px;
   margin:auto;
@@ -81,34 +77,26 @@ nav a:hover{
   margin-bottom:8px;
 }
 
-.title p{
-  color:#aaa;
-}
+.title p{color:#aaa;}
 
-/* HERO */
 .hero{
-  min-height:90vh;
+  min-height:85vh;
   display:flex;
   justify-content:center;
   align-items:center;
   text-align:center;
   padding:30px 20px;
-  background:
-    radial-gradient(circle at center,#292000 0%,#0d0d0d 55%,#050505 100%);
+  background:radial-gradient(circle at center,#292000,#0d0d0d 55%,#050505);
 }
 
-.hero-content{
-  max-width:800px;
-}
+.hero-content{max-width:800px;}
 
 .hero h1{
   font-size:58px;
   margin-bottom:15px;
 }
 
-.hero h1 span{
-  color:#d4af37;
-}
+.hero h1 span{color:#d4af37;}
 
 .hero p{
   color:#ccc;
@@ -134,8 +122,7 @@ nav a:hover{
   color:#000;
 }
 
-/* SERVICES */
-.services{
+.services,.designs{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:20px;
@@ -149,11 +136,9 @@ nav a:hover{
   text-align:center;
 }
 
-.service:hover{
-  border-color:#d4af37;
-}
+.service:hover{border-color:#d4af37;}
 
-.service .icon{
+.icon{
   font-size:38px;
   margin-bottom:12px;
 }
@@ -163,16 +148,7 @@ nav a:hover{
   margin-bottom:10px;
 }
 
-.service p{
-  color:#aaa;
-}
-
-/* DESIGNS */
-.designs{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
+.service p{color:#aaa;}
 
 .design{
   background:#151515;
@@ -195,9 +171,7 @@ nav a:hover{
   display:block;
 }
 
-.design-info{
-  padding:16px;
-}
+.design-info{padding:16px;}
 
 .design-info h3{
   color:#d4af37;
@@ -209,10 +183,16 @@ nav a:hover{
   font-size:14px;
 }
 
-/* DESIGN DETAIL */
-#detailPage{
-  display:none;
+.empty-message{
+  grid-column:1/-1;
+  text-align:center;
+  color:#aaa;
+  padding:30px;
+  background:#151515;
+  border-radius:10px;
 }
+
+#detailPage{display:none;}
 
 .detail-box{
   max-width:850px;
@@ -242,7 +222,6 @@ nav a:hover{
   white-space:pre-wrap;
 }
 
-/* ABOUT */
 .about{
   background:#151515;
   border-left:3px solid #d4af37;
@@ -251,11 +230,8 @@ nav a:hover{
   text-align:center;
 }
 
-.about p{
-  color:#ccc;
-}
+.about p{color:#ccc;line-height:1.8;}
 
-/* CONTACT */
 .contact{
   text-align:center;
   background:#151515;
@@ -273,7 +249,6 @@ nav a:hover{
   margin:10px 0 20px;
 }
 
-/* OWNER */
 .owner-area{
   max-width:700px;
   margin:40px auto 0;
@@ -289,8 +264,7 @@ nav a:hover{
   margin-bottom:15px;
 }
 
-.owner-area input,
-.owner-area textarea{
+.owner-area input,.owner-area textarea{
   width:100%;
   padding:13px;
   margin:7px 0;
@@ -305,9 +279,7 @@ nav a:hover{
   resize:vertical;
 }
 
-.owner-design-list{
-  margin-top:25px;
-}
+.owner-design-list{margin-top:25px;}
 
 .owner-item{
   display:flex;
@@ -329,7 +301,6 @@ nav a:hover{
   cursor:pointer;
 }
 
-/* FOOTER */
 footer{
   text-align:center;
   padding:25px;
@@ -338,13 +309,9 @@ footer{
   border-top:1px solid #292929;
 }
 
-footer strong{
-  color:#d4af37;
-}
+footer strong{color:#d4af37;}
 
-/* MOBILE */
 @media(max-width:800px){
-
   nav{
     flex-direction:column;
     gap:12px;
@@ -356,33 +323,22 @@ footer strong{
     justify-content:center;
   }
 
-  .hero h1{
-    font-size:39px;
-  }
+  .hero h1{font-size:39px;}
 
-  .services,
-  .designs{
+  .services,.designs{
     grid-template-columns:1fr;
   }
 
-  .container{
-    padding:55px 15px;
-  }
+  .container{padding:55px 15px;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
-
 <header>
 <nav>
-
-<div class="logo">
-Ashar <span>Creative Studio</span>
-</div>
-
+<div class="logo">Ashar <span>Creative Studio</span></div>
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#services">Services</a></li>
@@ -390,727 +346,283 @@ Ashar <span>Creative Studio</span>
 <li><a href="#about">About</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
-
 </nav>
 </header>
 
-
-<!-- ================= HOME ================= -->
-
 <section class="hero" id="home">
-
 <div class="hero-content">
-
-<h1>
-Ashar <span>Creative Studio</span>
-</h1>
-
-<p>
-Professional Graphic Designing & Printing Solutions
-</p>
-
-<a href="#designs" class="btn">
-View Designs
-</a>
-
-<a
-href="https://wa.me/923232134238"
-target="_blank"
-class="btn">
-WhatsApp
-</a>
-
+<h1>Ashar <span>Creative Studio</span></h1>
+<p>Professional Graphic Designing & Printing Solutions</p>
+<a href="#designs" class="btn">View Designs</a>
+<a href="https://wa.me/923232134238" target="_blank" class="btn">WhatsApp</a>
 </div>
-
 </section>
 
-
-<!-- ================= SERVICES ================= -->
-
 <section class="container" id="services">
-
 <div class="title">
-
 <h2>My Services</h2>
-
-<p>
-Creative designing and printing solutions
-</p>
-
+<p>Creative designing and printing solutions</p>
 </div>
 
 <div class="services">
-
-<div class="service">
-<div class="icon">🎨</div>
-<h3>Graphic Design</h3>
-<p>
-Professional logos, posters, social media posts and banners.
-</p>
+<div class="service"><div class="icon">🎨</div><h3>Graphic Design</h3><p>Professional logos, posters, social media posts and banners.</p></div>
+<div class="service"><div class="icon">🪪</div><h3>PVC Card</h3><p>Professional PVC card designing and printing.</p></div>
+<div class="service"><div class="icon">💳</div><h3>Visiting Card</h3><p>Modern and professional visiting card designs.</p></div>
+<div class="service"><div class="icon">💍</div><h3>Wedding Card</h3><p>Beautiful wedding invitation card designs.</p></div>
+<div class="service"><div class="icon">🖨️</div><h3>Printing</h3><p>Online printing solutions for different requirements.</p></div>
+<div class="service"><div class="icon">📦</div><h3>Printing Kit</h3><p>Complete designing and printing solutions.</p></div>
 </div>
-
-<div class="service">
-<div class="icon">🪪</div>
-<h3>PVC Card</h3>
-<p>
-Professional PVC card designing and printing.
-</p>
-</div>
-
-<div class="service">
-<div class="icon">💳</div>
-<h3>Visiting Card</h3>
-<p>
-Modern and professional visiting card designs.
-</p>
-</div>
-
-<div class="service">
-<div class="icon">💍</div>
-<h3>Wedding Card</h3>
-<p>
-Beautiful wedding invitation card designs.
-</p>
-</div>
-
-<div class="service">
-<div class="icon">🖨️</div>
-<h3>Printing</h3>
-<p>
-Online printing solutions for different requirements.
-</p>
-</div>
-
-<div class="service">
-<div class="icon">📦</div>
-<h3>Printing Kit</h3>
-<p>
-Complete designing and printing solutions.
-</p>
-</div>
-
-</div>
-
 </section>
-
-
-<!-- ================= ALL DESIGNS ================= -->
 
 <section class="container" id="designs">
-
 <div class="title">
-
 <h2>All Designs</h2>
-
-<p>
-Click any design to view complete details
-</p>
-
+<p>Explore our creative design collection</p>
 </div>
 
-<div class="designs" id="designList">
+<div class="designs" id="designList"></div>
 
-<!-- SAMPLE DESIGN -->
-
-<div class="design"
-onclick="showDetails(
-'Sample Design',
-'This is a sample design. Your real designs will appear here.',
-'')">
-
-<img
-src="https://via.placeholder.com/800x500/151515/d4af37?text=Ashar+Creative+Studio"
-alt="Sample Design">
-
-<div class="design-info">
-
-<h3>Sample Design</h3>
-
-<p>
-Click to view details
-</p>
-
+<!-- Owner access is hidden from customers -->
+<div id="ownerAccess" style="display:none;text-align:center;margin-top:35px;">
+<button class="btn" onclick="ownerLogin()">Owner Upload</button>
 </div>
-
-</div>
-
-</div>
-
-
-<!-- OWNER BUTTON -->
-
-<div style="text-align:center;margin-top:35px;">
-
-<button class="btn" onclick="ownerLogin()">
-Owner Upload
-</button>
-
-</div>
-
-
-<!-- OWNER PANEL -->
 
 <div class="owner-area" id="ownerPanel">
-
-<h3>
-Add New Design
-</h3>
-
-<input
-type="text"
-id="newTitle"
-placeholder="Design Title">
-
-<textarea
-id="newDetails"
-placeholder="Write design details here..."></textarea>
-
-<input
-type="file"
-id="newImage"
-accept="image/*">
-
-<button
-class="btn"
-onclick="uploadDesign()">
-Upload Design
-</button>
-
+<h3>Add New Design</h3>
+<input type="text" id="newTitle" placeholder="Design Title">
+<textarea id="newDetails" placeholder="Write design details here..."></textarea>
+<input type="file" id="newImage" accept="image/*">
+<button class="btn" onclick="uploadDesign()">Upload Design</button>
 <div class="owner-design-list" id="ownerDesignList"></div>
-
 </div>
-
 </section>
-
-
-<!-- ================= DESIGN DETAILS ================= -->
 
 <section class="container" id="detailPage">
-
 <div class="title">
-
 <h2>Design Details</h2>
-
-<p>
-Information about selected design
-</p>
-
+<p>Information about selected design</p>
 </div>
-
 <div class="detail-box">
-
 <img id="detailImage" src="" alt="Design">
-
-<h2 id="detailTitle">
-Design Title
-</h2>
-
-<p id="detailText">
-Design details
-</p>
-
-<a
-id="orderButton"
-href="#"
-target="_blank"
-class="btn">
-Order on WhatsApp
-</a>
-
-<button
-class="btn"
-onclick="closeDetails()">
-← Back to Designs
-</button>
-
+<h2 id="detailTitle">Design Title</h2>
+<p id="detailText">Design details</p>
+<a id="orderButton" href="#" target="_blank" class="btn">Order on WhatsApp</a>
+<button class="btn" onclick="closeDetails()">← Back to Designs</button>
 </div>
-
 </section>
-
-
-<!-- ================= ABOUT ================= -->
 
 <section class="container" id="about">
-
-<div class="title">
-
-<h2>About Ashar Creative Studio</h2>
-
-</div>
-
+<div class="title"><h2>About Ashar Creative Studio</h2></div>
 <div class="about">
-
-<p>
-Welcome to Ashar Creative Studio.
-I provide creative graphic designing and
-printing solutions with a focus on clean,
-professional and quality work.
-</p>
-
+<p>Welcome to Ashar Creative Studio. I provide creative graphic designing and printing solutions with a focus on clean, professional and quality work.</p>
 </div>
-
 </section>
-
-
-<!-- ================= CONTACT ================= -->
 
 <section class="container" id="contact">
-
 <div class="title">
-
 <h2>Contact</h2>
-
-<p>
-Let's discuss your project
-</p>
-
+<p>Let's discuss your project</p>
 </div>
-
 <div class="contact">
-
 <h3>WhatsApp</h3>
-
-<p>
-03232134238
-</p>
-
-<a
-href="https://wa.me/923232134238"
-target="_blank"
-class="btn">
-Chat on WhatsApp
-</a>
-
+<p>03232134238</p>
+<a href="https://wa.me/923232134238" target="_blank" class="btn">Chat on WhatsApp</a>
 </div>
-
 </section>
 
-
-<!-- ================= FOOTER ================= -->
-
 <footer>
-
-© 2026
-<strong>Ashar Creative Studio</strong>
-. All Rights Reserved.
-
+© 2026 <strong>Ashar Creative Studio</strong>. All Rights Reserved.
 </footer>
-
 
 <script>
 
-/* =====================================================
-   SETTINGS
-===================================================== */
+const WHATSAPP_NUMBER="923232134238";
+const OWNER_PASSWORD="ash123";
 
-const WHATSAPP_NUMBER = "923232134238";
+let designs=JSON.parse(localStorage.getItem("asharDesigns"))||[];
 
-/*
-   Temporary owner password.
+let isOwner=false;
 
-   Later, when we add a real backend,
-   this will be replaced with secure login.
-*/
-const OWNER_PASSWORD = "ash123";
+/* Owner mode is enabled only by a private URL key.
+   Example: yourwebsite.com/?owner=ashar */
+function checkOwnerMode(){
+  const params=new URLSearchParams(window.location.search);
 
-
-/* =====================================================
-   DESIGN DATA
-===================================================== */
-
-let designs =
-JSON.parse(localStorage.getItem("asharDesigns")) || [];
-
-
-/* =====================================================
-   SHOW ALL DESIGNS
-===================================================== */
+  if(params.get("owner")==="ashar"){
+    document.getElementById("ownerAccess").style.display="block";
+  }
+}
 
 function renderDesigns(){
+  const list=document.getElementById("designList");
+  list.innerHTML="";
 
-  const list =
-  document.getElementById("designList");
-
-  list.innerHTML = "";
-
-
-  /* SAMPLE DESIGN */
-
-  list.innerHTML += `
-
-  <div class="design"
-  onclick="showDetails(
-  'Sample Design',
-  'This is a sample design. Your real designs will appear here.',
-  'https://via.placeholder.com/800x500/151515/d4af37?text=Ashar+Creative+Studio'
-  )">
-
-    <img
-    src="https://via.placeholder.com/800x500/151515/d4af37?text=Ashar+Creative+Studio"
-    alt="Sample Design">
-
-    <div class="design-info">
-
-      <h3>Sample Design</h3>
-
-      <p>Click to view details</p>
-
-    </div>
-
-  </div>
-
-  `;
-
-
-  /* UPLOADED DESIGNS */
+  if(designs.length===0){
+    list.innerHTML='<div class="empty-message">New creative designs coming soon.</div>';
+    return;
+  }
 
   designs.forEach((design,index)=>{
+    const card=document.createElement("div");
+    card.className="design";
 
-    list.innerHTML += `
+    const img=document.createElement("img");
+    img.src=design.image;
+    img.alt=design.title;
 
-    <div class="design"
-    onclick="showDetails(
-    ${JSON.stringify(design.title)},
-    ${JSON.stringify(design.details)},
-    ${JSON.stringify(design.image)}
-    )">
+    const info=document.createElement("div");
+    info.className="design-info";
 
-      <img
-      src="${design.image}"
-      alt="${escapeHTML(design.title)}">
+    const heading=document.createElement("h3");
+    heading.textContent=design.title;
 
-      <div class="design-info">
+    const description=document.createElement("p");
+    description.textContent="Click to view details";
 
-        <h3>
-        ${escapeHTML(design.title)}
-        </h3>
+    info.append(heading,description);
+    card.append(img,info);
 
-        <p>
-        Click to view details
-        </p>
+    card.addEventListener("click",()=>{
+      showDetails(index);
+    });
 
-      </div>
-
-    </div>
-
-    `;
-
+    list.appendChild(card);
   });
-
 }
 
+function showDetails(index){
+  const design=designs[index];
+  if(!design)return;
 
-/* =====================================================
-   SHOW DESIGN DETAILS
-===================================================== */
+  document.getElementById("detailTitle").textContent=design.title;
+  document.getElementById("detailText").textContent=design.details;
+  document.getElementById("detailImage").src=design.image;
 
-function showDetails(title,details,image){
+  document.getElementById("orderButton").href=
+    "https://wa.me/"+WHATSAPP_NUMBER+
+    "?text="+encodeURIComponent(
+      "Assalam o Alaikum, I want to order this design: "+design.title
+    );
 
-  document.getElementById("detailTitle").textContent =
-  title;
+  document.getElementById("detailPage").style.display="block";
+  document.getElementById("designs").style.display="none";
 
-  document.getElementById("detailText").textContent =
-  details;
-
-  document.getElementById("detailImage").src =
-  image;
-
-  document.getElementById("orderButton").href =
-  "https://wa.me/" +
-  WHATSAPP_NUMBER +
-  "?text=" +
-  encodeURIComponent(
-    "Assalam o Alaikum, I want to order this design: " +
-    title
-  );
-
-
-  document.getElementById("detailPage").style.display =
-  "block";
-
-  document.getElementById("designs").style.display =
-  "none";
-
-  window.scrollTo({
-    top:0,
-    behavior:"smooth"
-  });
-
+  window.scrollTo({top:0,behavior:"smooth"});
 }
-
-
-/* =====================================================
-   CLOSE DETAILS
-===================================================== */
 
 function closeDetails(){
-
-  document.getElementById("detailPage").style.display =
-  "none";
-
-  document.getElementById("designs").style.display =
-  "block";
-
-  document.getElementById("designs").scrollIntoView({
-    behavior:"smooth"
-  });
-
+  document.getElementById("detailPage").style.display="none";
+  document.getElementById("designs").style.display="block";
+  document.getElementById("designs").scrollIntoView({behavior:"smooth"});
 }
-
-
-/* =====================================================
-   OWNER LOGIN
-===================================================== */
 
 function ownerLogin(){
+  const password=prompt("Enter Owner Password:");
 
-  const password =
-  prompt("Enter Owner Password:");
-
-  if(password === OWNER_PASSWORD){
-
-    document.getElementById("ownerPanel").style.display =
-    "block";
-
+  if(password===OWNER_PASSWORD){
+    isOwner=true;
+    document.getElementById("ownerPanel").style.display="block";
     renderOwnerList();
-
     alert("Owner panel opened.");
-
   }else{
-
     alert("Wrong password.");
-
   }
-
 }
 
-
-/* =====================================================
-   UPLOAD DESIGN
-===================================================== */
-
 function uploadDesign(){
+  if(!isOwner)return;
 
-  const title =
-  document.getElementById("newTitle").value.trim();
+  const title=document.getElementById("newTitle").value.trim();
+  const details=document.getElementById("newDetails").value.trim();
+  const imageInput=document.getElementById("newImage");
 
-  const details =
-  document.getElementById("newDetails").value.trim();
-
-  const imageInput =
-  document.getElementById("newImage");
-
-
-  if(!title){
-
-    alert("Please enter design title.");
-
+  if(!title||!details||imageInput.files.length===0){
+    alert("Please enter title, details and select an image.");
     return;
-
   }
 
+  const file=imageInput.files[0];
 
-  if(!details){
-
-    alert("Please enter design details.");
-
+  if(file.size>2*1024*1024){
+    alert("Please select an image smaller than 2 MB.");
     return;
-
   }
 
+  const reader=new FileReader();
 
-  if(imageInput.files.length === 0){
-
-    alert("Please select a design image.");
-
-    return;
-
-  }
-
-
-  const file =
-  imageInput.files[0];
-
-
-  const reader =
-  new FileReader();
-
-
-  reader.onload = function(event){
-
-    const design = {
-
+  reader.onload=function(event){
+    const design={
       id:Date.now(),
-
       title:title,
-
       details:details,
-
       image:event.target.result
-
     };
-
 
     designs.push(design);
 
-
     try{
-
-      localStorage.setItem(
-        "asharDesigns",
-        JSON.stringify(designs)
-      );
-
+      localStorage.setItem("asharDesigns",JSON.stringify(designs));
     }catch(error){
-
-      alert(
-        "Image is too large for browser storage. " +
-        "For permanent online uploads, we will add the backend."
-      );
-
       designs.pop();
-
+      alert("Browser storage is full. Image could not be saved.");
       return;
-
     }
 
-
-    document.getElementById("newTitle").value = "";
-
-    document.getElementById("newDetails").value = "";
-
-    document.getElementById("newImage").value = "";
-
+    document.getElementById("newTitle").value="";
+    document.getElementById("newDetails").value="";
+    imageInput.value="";
 
     renderDesigns();
-
     renderOwnerList();
 
-
     alert("Design uploaded successfully.");
-
   };
 
-
   reader.readAsDataURL(file);
-
 }
-
-
-/* =====================================================
-   OWNER DESIGN LIST
-===================================================== */
 
 function renderOwnerList(){
+  const box=document.getElementById("ownerDesignList");
+  box.innerHTML="";
 
-  const box =
-  document.getElementById("ownerDesignList");
-
-  box.innerHTML = "";
-
-
-  if(designs.length === 0){
-
-    box.innerHTML =
-    "<p style='color:#aaa;'>No uploaded designs yet.</p>";
-
+  if(designs.length===0){
+    box.textContent="No uploaded designs yet.";
     return;
-
   }
-
 
   designs.forEach((design,index)=>{
+    const item=document.createElement("div");
+    item.className="owner-item";
 
-    const item =
-    document.createElement("div");
+    const title=document.createElement("span");
+    title.textContent=design.title;
 
-    item.className =
-    "owner-item";
+    const button=document.createElement("button");
+    button.className="delete-btn";
+    button.textContent="Delete";
 
+    button.onclick=()=>deleteDesign(index);
 
-    item.innerHTML = `
-
-      <span>
-      ${escapeHTML(design.title)}
-      </span>
-
-      <button
-      class="delete-btn"
-      onclick="deleteDesign(${index})">
-      Delete
-      </button>
-
-    `;
-
-
+    item.append(title,button);
     box.appendChild(item);
-
   });
-
 }
-
-
-/* =====================================================
-   DELETE DESIGN
-===================================================== */
 
 function deleteDesign(index){
+  if(!isOwner)return;
 
-  const confirmDelete =
-  confirm("Delete this design?");
-
-
-  if(!confirmDelete){
-
-    return;
-
-  }
-
+  if(!confirm("Delete this design?"))return;
 
   designs.splice(index,1);
-
-
-  localStorage.setItem(
-    "asharDesigns",
-    JSON.stringify(designs)
-  );
-
+  localStorage.setItem("asharDesigns",JSON.stringify(designs));
 
   renderDesigns();
-
   renderOwnerList();
-
 }
 
-
-/* =====================================================
-   SECURITY HELPER
-===================================================== */
-
-function escapeHTML(text){
-
-  return String(text)
-
-  .replaceAll("&","&amp;")
-
-  .replaceAll("<","&lt;")
-
-  .replaceAll(">","&gt;")
-
-  .replaceAll('"',"&quot;")
-
-  .replaceAll("'","&#039;");
-
-}
-
-
-/* =====================================================
-   START WEBSITE
-===================================================== */
-
+checkOwnerMode();
 renderDesigns();
 
 </script>
-
 </body>
 </html>
