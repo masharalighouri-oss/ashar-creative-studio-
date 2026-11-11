@@ -1,349 +1,74 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#090909">
-<meta name="description" content="Ashar Creative Studio - Graphic Designing and Printing Solutions">
 <title>Ashar Creative Studio</title>
-
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:Arial,sans-serif;
-  background:#090909;
-  color:white;
-}
-
-header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:#101010;
-  border-bottom:1px solid #292929;
-}
-
-nav{
-  max-width:1150px;
-  margin:auto;
-  padding:16px 20px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.logo{
-  font-size:23px;
-  font-weight:bold;
-  color:#d4af37;
-}
-
-.logo span{color:white;}
-
-nav ul{
-  list-style:none;
-  display:flex;
-  gap:22px;
-}
-
-nav a{
-  color:white;
-  text-decoration:none;
-}
-
-nav a:hover{color:#d4af37;}
-
-.container{
-  max-width:1150px;
-  margin:auto;
-  padding:70px 20px;
-}
-
-.title{
-  text-align:center;
-  margin-bottom:40px;
-}
-
-.title h2{
-  color:#d4af37;
-  font-size:35px;
-  margin-bottom:8px;
-}
-
-.title p{color:#aaa;}
-
-.hero{
-  min-height:85vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:30px 20px;
-  background:radial-gradient(circle,#292000,#0d0d0d 55%,#050505);
-}
-
-.hero-content{max-width:800px;}
-
-.hero h1{
-  font-size:58px;
-  margin-bottom:15px;
-}
-
-.hero h1 span{color:#d4af37;}
-
-.hero p{
-  color:#ccc;
-  font-size:18px;
-  margin-bottom:30px;
-}
-
-.btn{
-  display:inline-block;
-  padding:13px 25px;
-  margin:5px;
-  border:1px solid #d4af37;
-  border-radius:6px;
-  background:transparent;
-  color:#d4af37;
-  text-decoration:none;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-.btn:hover{
-  background:#d4af37;
-  color:#000;
-}
-
-.services,.designs{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.service{
-  background:#151515;
-  border:1px solid #292929;
-  border-radius:10px;
-  padding:28px 20px;
-  text-align:center;
-}
-
-.service:hover{border-color:#d4af37;}
-
-.icon{
-  font-size:38px;
-  margin-bottom:12px;
-}
-
-.service h3{
-  color:#d4af37;
-  margin-bottom:10px;
-}
-
-.service p{color:#aaa;}
-
-.design{
-  background:#151515;
-  border:1px solid #292929;
-  border-radius:10px;
-  overflow:hidden;
-  cursor:pointer;
-  transition:.25s;
-}
-
-.design:hover{
-  transform:translateY(-5px);
-  border-color:#d4af37;
-}
-
-.design img{
-  width:100%;
-  height:230px;
-  object-fit:cover;
-  display:block;
-}
-
-.design-info{padding:16px;}
-
-.design-info h3{
-  color:#d4af37;
-  margin-bottom:6px;
-}
-
-.design-info p{
-  color:#aaa;
-  font-size:14px;
-}
-
-.empty-message{
-  grid-column:1/-1;
-  text-align:center;
-  padding:30px;
-  color:#aaa;
-  background:#151515;
-  border-radius:10px;
-}
-
-#detailPage{display:none;}
-
-.detail-box{
-  max-width:850px;
-  margin:auto;
-  background:#151515;
-  border:1px solid #333;
-  border-radius:12px;
-  padding:20px;
-}
-
-.detail-box img{
-  width:100%;
-  max-height:600px;
-  object-fit:contain;
-  background:#050505;
-  border-radius:8px;
-}
-
-.detail-box h2{
-  color:#d4af37;
-  margin-top:20px;
-}
-
-.detail-box p{
-  color:#bbb;
-  margin:12px 0;
-  white-space:pre-wrap;
-}
-
-.about{
-  background:#151515;
-  border-left:3px solid #d4af37;
-  border-radius:8px;
-  padding:30px;
-  text-align:center;
-}
-
-.about p{
-  color:#ccc;
-  line-height:1.8;
-}
-
-.contact{
-  text-align:center;
-  background:#151515;
-  padding:40px 20px;
-  border-radius:10px;
-}
-
-.contact h3{
-  color:#d4af37;
-  font-size:28px;
-}
-
-.contact p{
-  color:#bbb;
-  margin:10px 0 20px;
-}
-
-.owner-area{
-  max-width:700px;
-  margin:40px auto 0;
-  background:#111;
-  border:1px solid #d4af37;
-  border-radius:10px;
-  padding:25px;
-  display:none;
-}
-
-.owner-area h3{
-  color:#d4af37;
-  margin-bottom:15px;
-}
-
-.owner-area input,
-.owner-area textarea{
-  width:100%;
-  padding:13px;
-  margin:7px 0;
-  background:#202020;
-  color:white;
-  border:1px solid #444;
-  border-radius:6px;
-}
-
-.owner-area textarea{
-  height:110px;
-  resize:vertical;
-}
-
-.owner-design-list{margin-top:25px;}
-
-.owner-item{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:10px;
-  background:#1b1b1b;
-  padding:10px;
-  margin:8px 0;
-  border-radius:6px;
-}
-
-.delete-btn{
-  background:#b32626;
-  color:white;
-  border:0;
-  padding:8px 12px;
-  border-radius:5px;
-  cursor:pointer;
-}
-
-footer{
-  text-align:center;
-  padding:25px;
-  background:#101010;
-  color:#888;
-  border-top:1px solid #292929;
-}
-
-footer strong{color:#d4af37;}
-
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#090909;color:white}
+header{position:sticky;top:0;z-index:10;background:#101010;border-bottom:1px solid #292929}
+nav{max-width:1150px;margin:auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:23px;font-weight:bold;color:#d4af37}
+.logo span{color:white}
+nav ul{list-style:none;display:flex;gap:22px}
+nav a{color:white;text-decoration:none}
+.container{max-width:1150px;margin:auto;padding:65px 20px}
+.title{text-align:center;margin-bottom:35px}
+.title h2{color:#d4af37;font-size:34px;margin-bottom:8px}
+.title p,.service p,.design-info p{color:#aaa}
+.hero{min-height:82vh;display:flex;justify-content:center;align-items:center;text-align:center;padding:30px;background:radial-gradient(circle,#292000,#0d0d0d 55%,#050505)}
+.hero-content{max-width:800px}
+.hero h1{font-size:54px;margin-bottom:15px}
+.hero h1 span{color:#d4af37}
+.hero p{color:#ccc;font-size:18px;margin-bottom:28px}
+.btn{display:inline-block;padding:13px 24px;margin:5px;border:1px solid #d4af37;border-radius:6px;background:transparent;color:#d4af37;text-decoration:none;font-weight:bold;cursor:pointer}
+.btn:hover{background:#d4af37;color:#000}
+.services,.designs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service,.design{background:#151515;border:1px solid #292929;border-radius:10px;overflow:hidden}
+.service{padding:26px 20px;text-align:center}
+.service h3,.design-info h3{color:#d4af37;margin-bottom:9px}
+.icon{font-size:38px;margin-bottom:12px}
+.design{cursor:pointer;transition:.2s}
+.design:hover{transform:translateY(-4px);border-color:#d4af37}
+.design img{width:100%;height:230px;object-fit:cover;display:block}
+.design-info{padding:16px}
+.design-info p{font-size:14px}
+.empty-message{grid-column:1/-1;text-align:center;padding:30px;color:#aaa;background:#151515;border-radius:10px}
+#detailPage{display:none}
+.detail-box{max-width:850px;margin:auto;background:#151515;border:1px solid #333;border-radius:12px;padding:20px}
+.detail-box img{width:100%;max-height:600px;object-fit:contain;background:#050505}
+.detail-box h2{color:#d4af37;margin-top:18px}
+.detail-box p{color:#bbb;margin:12px 0;white-space:pre-wrap}
+.about,.contact{background:#151515;border-radius:10px;padding:30px;text-align:center}
+.about{border-left:3px solid #d4af37}
+.about p{color:#ccc;line-height:1.8}
+.contact h3{color:#d4af37;font-size:28px}
+.contact p{color:#bbb;margin:12px}
+.owner-area{max-width:700px;margin:35px auto 0;background:#111;border:1px solid #d4af37;border-radius:10px;padding:24px;display:none}
+.owner-area h3{color:#d4af37;margin-bottom:14px}
+.owner-area input,.owner-area textarea{width:100%;padding:13px;margin:7px 0;background:#202020;color:white;border:1px solid #444;border-radius:6px}
+.owner-area textarea{height:100px}
+.owner-item{display:flex;justify-content:space-between;gap:10px;background:#1b1b1b;padding:10px;margin:8px 0;border-radius:6px}
+.delete-btn{background:#b32626;color:white;border:0;padding:8px 12px;border-radius:5px;cursor:pointer}
+.status{color:#d4af37;min-height:22px;margin:8px 0}
+footer{text-align:center;padding:25px;background:#101010;color:#888;border-top:1px solid #292929}
+footer strong{color:#d4af37}
 @media(max-width:800px){
-  nav{
-    flex-direction:column;
-    gap:12px;
-  }
-
-  nav ul{
-    gap:12px;
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-
-  .hero h1{font-size:39px;}
-
-  .services,.designs{
-    grid-template-columns:1fr;
-  }
-
-  .container{padding:55px 15px;}
+nav{flex-direction:column;gap:12px}
+nav ul{gap:12px;flex-wrap:wrap;justify-content:center}
+.hero h1{font-size:38px}
+.services,.designs{grid-template-columns:1fr}
+.container{padding:50px 15px}
 }
 </style>
 </head>
-
 <body>
 
 <header>
 <nav>
 <div class="logo">Ashar <span>Creative Studio</span></div>
-
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#services">Services</a></li>
@@ -357,12 +82,9 @@ footer strong{color:#d4af37;}
 <section class="hero" id="home">
 <div class="hero-content">
 <h1>Ashar <span>Creative Studio</span></h1>
-<p>Professional Graphic Designing & Printing Solutions</p>
-
+<p>Professional Graphic Designing &amp; Printing Solutions</p>
 <a href="#designs" class="btn">View Designs</a>
-
-<a href="https://wa.me/923232134238"
-target="_blank" class="btn">WhatsApp</a>
+<a href="https://wa.me/923232134238" target="_blank" rel="noopener" class="btn">WhatsApp</a>
 </div>
 </section>
 
@@ -371,508 +93,264 @@ target="_blank" class="btn">WhatsApp</a>
 <h2>My Services</h2>
 <p>Creative designing and printing solutions</p>
 </div>
-
 <div class="services">
-
-<div class="service">
-<div class="icon">🎨</div>
-<h3>Graphic Design</h3>
-<p>Professional logos, posters, social media posts and banners.</p>
-</div>
-
-<div class="service">
-<div class="icon">🪪</div>
-<h3>PVC Card</h3>
-<p>Professional PVC card designing and printing.</p>
-</div>
-
-<div class="service">
-<div class="icon">💳</div>
-<h3>Visiting Card</h3>
-<p>Modern and professional visiting card designs.</p>
-</div>
-
-<div class="service">
-<div class="icon">💍</div>
-<h3>Wedding Card</h3>
-<p>Beautiful wedding invitation card designs.</p>
-</div>
-
-<div class="service">
-<div class="icon">🖨️</div>
-<h3>Printing</h3>
-<p>Online printing solutions for different requirements.</p>
-</div>
-
-<div class="service">
-<div class="icon">📦</div>
-<h3>Printing Kit</h3>
-<p>Complete designing and printing solutions.</p>
-</div>
-
+<div class="service"><div class="icon">🎨</div><h3>Graphic Design</h3><p>Professional logos, posters, social media posts and banners.</p></div>
+<div class="service"><div class="icon">🪪</div><h3>PVC Card</h3><p>Professional PVC card designing and printing.</p></div>
+<div class="service"><div class="icon">💳</div><h3>Visiting Card</h3><p>Modern and professional visiting card designs.</p></div>
+<div class="service"><div class="icon">💍</div><h3>Wedding Card</h3><p>Beautiful wedding invitation card designs.</p></div>
+<div class="service"><div class="icon">🖨️</div><h3>Printing</h3><p>Online printing solutions for different requirements.</p></div>
+<div class="service"><div class="icon">📦</div><h3>Printing Kit</h3><p>Complete designing and printing solutions.</p></div>
 </div>
 </section>
 
 <section class="container" id="designs">
-
 <div class="title">
 <h2>All Designs</h2>
 <p>Explore our creative design collection</p>
 </div>
+<div class="designs" id="designList">
+<div class="empty-message">Loading designs...</div>
+</div>
 
-<div class="designs" id="designList"></div>
-
-<div id="ownerAccess"
-style="display:none;text-align:center;margin-top:35px;">
-
-<button class="btn" onclick="ownerLogin()">
-Owner Upload
-</button>
-
+<div id="ownerAccess" style="display:none;text-align:center;margin-top:30px">
+<button class="btn" id="loginBtn">Owner Login</button>
 </div>
 
 <div class="owner-area" id="ownerPanel">
-
 <h3>Owner Upload Panel</h3>
-
-<input type="text" id="newTitle"
-placeholder="Design Title">
-
-<textarea id="newDetails"
-placeholder="Write design details here..."></textarea>
-
-<input type="file" id="newImage" accept="image/*">
-
-<button class="btn" onclick="uploadDesign()">
-Upload Design
-</button>
-
-<button class="btn" onclick="ownerLogout()">
-Logout
-</button>
-
-<div class="owner-design-list" id="ownerDesignList"></div>
-
+<input id="newTitle" maxlength="100" placeholder="Design Title">
+<textarea id="newDetails" maxlength="2000" placeholder="Write design details here..."></textarea>
+<input type="file" id="newImage" accept="image/jpeg,image/png,image/webp">
+<button class="btn" id="uploadBtn">Upload Design</button>
+<button class="btn" id="logoutBtn">Logout</button>
+<p class="status" id="status" role="status"></p>
+<div id="ownerList"></div>
 </div>
 </section>
 
 <section class="container" id="detailPage">
-
 <div class="title">
 <h2>Design Details</h2>
 <p>Information about selected design</p>
 </div>
-
 <div class="detail-box">
-
-<img id="detailImage" src="" alt="Design">
-
+<img id="detailImage" alt="Selected design">
 <h2 id="detailTitle"></h2>
-
 <p id="detailText"></p>
-
-<a id="orderButton" href="#"
-target="_blank" class="btn">
-Order on WhatsApp
-</a>
-
-<button class="btn" onclick="closeDetails()">
-← Back to Designs
-</button>
-
+<a id="orderButton" target="_blank" rel="noopener" class="btn">Order on WhatsApp</a>
+<button class="btn" id="backBtn">← Back to Designs</button>
 </div>
 </section>
 
 <section class="container" id="about">
-
-<div class="title">
-<h2>About Ashar Creative Studio</h2>
-</div>
-
+<div class="title"><h2>About Ashar Creative Studio</h2></div>
 <div class="about">
-<p>
-Welcome to Ashar Creative Studio.
-I provide creative graphic designing and printing
-solutions with a focus on clean, professional
-and quality work.
-</p>
+<p>Welcome to Ashar Creative Studio. I provide creative graphic designing and printing solutions with a focus on clean, professional and quality work.</p>
 </div>
-
 </section>
 
 <section class="container" id="contact">
-
 <div class="title">
 <h2>Contact</h2>
 <p>Let's discuss your project</p>
 </div>
-
 <div class="contact">
 <h3>WhatsApp</h3>
 <p>03232134238</p>
-
-<a href="https://wa.me/923232134238"
-target="_blank" class="btn">
-Chat on WhatsApp
-</a>
+<a href="https://wa.me/923232134238" target="_blank" rel="noopener" class="btn">Chat on WhatsApp</a>
 </div>
-
 </section>
 
 <footer>
-© 2026 <strong>Ashar Creative Studio</strong>.
-All Rights Reserved.
+© 2026 <strong>Ashar Creative Studio</strong>. All Rights Reserved.
 </footer>
 
 <script>
+const WA="923232134238";
+let designs=[];
+let isOwner=false;
 
-/* SETTINGS */
+async function api(url,options={}){
+const r=await fetch(url,{credentials:"same-origin",...options});
+const d=await r.json().catch(()=>({}));
+if(!r.ok)throw Error(d.error||"Request failed");
+return d;
+}
 
-const WHATSAPP_NUMBER = "923232134238";
-const OWNER_PASSWORD = "ash123";
+function status(t){
+document.getElementById("status").textContent=t;
+}
 
-/* DESIGN STORAGE */
-
-let designs = [];
-
+async function loadDesigns(){
 try{
-  designs = JSON.parse(
-    localStorage.getItem("asharDesigns")
-  ) || [];
-}catch(error){
-  designs = [];
+const d=await api("/api/designs");
+designs=d.designs||[];
+render();
+}catch(e){
+document.getElementById("designList").innerHTML='<div class="empty-message">Designs could not load. Please refresh.</div>';
+}
 }
 
-let isOwner = false;
-
-/* OWNER URL */
-
-function checkOwnerMode(){
-
-  const params = new URLSearchParams(
-    window.location.search
-  );
-
-  if(params.get("owner") === "ashar"){
-    document.getElementById("ownerAccess")
-    .style.display = "block";
-  }
-
+function render(){
+const list=document.getElementById("designList");
+list.innerHTML="";
+if(!designs.length){
+list.innerHTML='<div class="empty-message">New creative designs coming soon.</div>';
+return;
+}
+designs.forEach(d=>{
+const c=document.createElement("div");
+c.className="design";
+const im=document.createElement("img");
+im.src=d.imageUrl;
+im.alt=d.title;
+im.loading="lazy";
+const info=document.createElement("div");
+info.className="design-info";
+const h=document.createElement("h3");
+h.textContent=d.title;
+const p=document.createElement("p");
+p.textContent="Click to view details";
+info.append(h,p);
+c.append(im,info);
+c.onclick=()=>details(d);
+list.append(c);
+});
+if(isOwner)renderOwnerList();
 }
 
-/* SHOW DESIGNS */
-
-function renderDesigns(){
-
-  const list = document.getElementById("designList");
-  list.innerHTML = "";
-
-  // SAMPLE DESIGN ONLY FOR OWNER
-
-  if(isOwner){
-
-    const sample = document.createElement("div");
-    sample.className = "design";
-
-    const image = document.createElement("img");
-
-    image.src =
-    "https://placehold.co/800x500/151515/d4af37?text=Ashar+Creative+Studio";
-
-    image.alt = "Sample Design";
-
-    const info = document.createElement("div");
-    info.className = "design-info";
-
-    info.innerHTML =
-    "<h3>Sample Design</h3><p>Private sample preview</p>";
-
-    sample.append(image,info);
-
-    sample.onclick = function(){
-
-      showDetails(
-        "Sample Design",
-        "Private sample design preview.",
-        image.src
-      );
-
-    };
-
-    list.appendChild(sample);
-
-  }
-
-  // REAL DESIGNS
-
-  designs.forEach(function(design,index){
-
-    const card = document.createElement("div");
-    card.className = "design";
-
-    const img = document.createElement("img");
-    img.src = design.image;
-    img.alt = design.title;
-
-    const info = document.createElement("div");
-    info.className = "design-info";
-
-    const heading = document.createElement("h3");
-    heading.textContent = design.title;
-
-    const paragraph = document.createElement("p");
-    paragraph.textContent = "Click to view details";
-
-    info.append(heading,paragraph);
-    card.append(img,info);
-
-    card.onclick = function(){
-      showDetails(
-        design.title,
-        design.details,
-        design.image
-      );
-    };
-
-    list.appendChild(card);
-
-  });
-
-  if(designs.length === 0 && !isOwner){
-
-    list.innerHTML =
-    '<div class="empty-message">New creative designs coming soon.</div>';
-
-  }
-
+function details(d){
+document.getElementById("detailTitle").textContent=d.title;
+document.getElementById("detailText").textContent=d.details||"";
+document.getElementById("detailImage").src=d.imageUrl;
+document.getElementById("orderButton").href="https://wa.me/"+WA+"?text="+encodeURIComponent("Assalam o Alaikum, I want to order this design: "+d.title);
+document.getElementById("detailPage").style.display="block";
+document.getElementById("designs").style.display="none";
+scrollTo({top:0,behavior:"smooth"});
 }
-
-/* DESIGN DETAILS */
-
-function showDetails(title,details,image){
-
-  document.getElementById("detailTitle").textContent = title;
-  document.getElementById("detailText").textContent = details;
-  document.getElementById("detailImage").src = image;
-
-  document.getElementById("orderButton").href =
-  "https://wa.me/" + WHATSAPP_NUMBER +
-  "?text=" + encodeURIComponent(
-    "Assalam o Alaikum, I want to order this design: " + title
-  );
-
-  document.getElementById("detailPage").style.display = "block";
-  document.getElementById("designs").style.display = "none";
-
-  window.scrollTo({
-    top:0,
-    behavior:"smooth"
-  });
-
-}
-
-/* CLOSE DETAILS */
 
 function closeDetails(){
-
-  document.getElementById("detailPage").style.display = "none";
-  document.getElementById("designs").style.display = "block";
-
-  document.getElementById("designs").scrollIntoView({
-    behavior:"smooth"
-  });
-
+document.getElementById("detailPage").style.display="none";
+document.getElementById("designs").style.display="block";
+document.getElementById("designs").scrollIntoView({behavior:"smooth"});
 }
 
-/* OWNER LOGIN */
-
-function ownerLogin(){
-
-  const password = prompt("Enter Owner Password:");
-
-  if(password === OWNER_PASSWORD){
-
-    isOwner = true;
-
-    renderDesigns();
-
-    document.getElementById("ownerPanel").style.display = "block";
-
-    renderOwnerList();
-
-    alert("Owner panel opened successfully.");
-
-  }else{
-
-    alert("Wrong password.");
-
-  }
-
+async function checkSession(){
+try{
+isOwner=(await api("/api/session")).owner;
+document.getElementById("ownerPanel").style.display=isOwner?"block":"none";
+if(isOwner)renderOwnerList();
+}catch(e){
+isOwner=false;
+}
 }
 
-/* OWNER LOGOUT */
-
-function ownerLogout(){
-
-  isOwner = false;
-
-  document.getElementById("ownerPanel").style.display = "none";
-
-  renderDesigns();
-
-  alert("Owner logged out.");
-
+async function login(){
+const password=prompt("Enter Owner Password:");
+if(password===null)return;
+try{
+await api("/api/login",{
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body:JSON.stringify({password})
+});
+isOwner=true;
+document.getElementById("ownerPanel").style.display="block";
+renderOwnerList();
+status("Owner login successful.");
+}catch(e){
+alert(e.message);
+}
 }
 
-/* UPLOAD DESIGN */
-
-function uploadDesign(){
-
-  if(!isOwner) return;
-
-  const title =
-  document.getElementById("newTitle").value.trim();
-
-  const details =
-  document.getElementById("newDetails").value.trim();
-
-  const imageInput =
-  document.getElementById("newImage");
-
-  if(!title || !details || imageInput.files.length === 0){
-
-    alert("Please enter title, details and select image.");
-    return;
-
-  }
-
-  const file = imageInput.files[0];
-
-  if(!file.type.startsWith("image/")){
-
-    alert("Please select a valid image.");
-    return;
-
-  }
-
-  if(file.size > 2 * 1024 * 1024){
-
-    alert("Please select an image smaller than 2 MB.");
-    return;
-
-  }
-
-  const reader = new FileReader();
-
-  reader.onload = function(event){
-
-    const design = {
-
-      id: Date.now(),
-      title: title,
-      details: details,
-      image: event.target.result
-
-    };
-
-    designs.push(design);
-
-    try{
-
-      localStorage.setItem(
-        "asharDesigns",
-        JSON.stringify(designs)
-      );
-
-    }catch(error){
-
-      designs.pop();
-
-      alert("Browser storage is full. Design not saved.");
-      return;
-
-    }
-
-    document.getElementById("newTitle").value = "";
-    document.getElementById("newDetails").value = "";
-    imageInput.value = "";
-
-    renderDesigns();
-    renderOwnerList();
-
-    alert("Design uploaded successfully.");
-
-  };
-
-  reader.readAsDataURL(file);
-
+async function logout(){
+try{
+await api("/api/logout",{method:"POST"});
+}catch(e){}
+isOwner=false;
+document.getElementById("ownerPanel").style.display="none";
+status("");
 }
 
-/* OWNER DESIGN LIST */
+async function upload(){
+if(!isOwner)return;
+const title=document.getElementById("newTitle").value.trim();
+const details=document.getElementById("newDetails").value.trim();
+const file=document.getElementById("newImage").files[0];
+
+if(!title||!details||!file){
+status("Title, details aur image teeno enter karein.");
+return;
+}
+if(!["image/jpeg","image/png","image/webp"].includes(file.type)){
+status("Sirf JPG, PNG ya WEBP image allowed hai.");
+return;
+}
+if(file.size>5*1024*1024){
+status("Image 5 MB se chhoti honi chahiye.");
+return;
+}
+
+const f=new FormData();
+f.append("title",title);
+f.append("details",details);
+f.append("image",file);
+
+const b=document.getElementById("uploadBtn");
+b.disabled=true;
+status("Uploading...");
+
+try{
+await api("/api/upload",{method:"POST",body:f});
+document.getElementById("newTitle").value="";
+document.getElementById("newDetails").value="";
+document.getElementById("newImage").value="";
+await loadDesigns();
+status("Upload complete. Ab sab customers ko design nazar aayega.");
+}catch(e){
+status(e.message);
+}finally{
+b.disabled=false;
+}
+}
 
 function renderOwnerList(){
-
-  const box =
-  document.getElementById("ownerDesignList");
-
-  box.innerHTML = "";
-
-  if(designs.length === 0){
-
-    box.textContent = "No uploaded designs yet.";
-    return;
-
-  }
-
-  designs.forEach(function(design,index){
-
-    const item = document.createElement("div");
-    item.className = "owner-item";
-
-    const title = document.createElement("span");
-    title.textContent = design.title;
-
-    const button = document.createElement("button");
-    button.className = "delete-btn";
-    button.textContent = "Delete";
-
-    button.onclick = function(){
-      deleteDesign(index);
-    };
-
-    item.append(title,button);
-    box.appendChild(item);
-
-  });
-
+const box=document.getElementById("ownerList");
+box.innerHTML="";
+designs.forEach(d=>{
+const row=document.createElement("div");
+row.className="owner-item";
+const t=document.createElement("span");
+t.textContent=d.title;
+const b=document.createElement("button");
+b.className="delete-btn";
+b.textContent="Delete";
+b.onclick=async()=>{
+if(!isOwner||!confirm("Delete this design?"))return;
+try{
+await api("/api/designs/"+encodeURIComponent(d.key),{method:"DELETE"});
+await loadDesigns();
+status("Design deleted.");
+}catch(e){
+status(e.message);
+}
+};
+row.append(t,b);
+box.append(row);
+});
 }
 
-/* DELETE DESIGN */
+document.getElementById("loginBtn").onclick=login;
+document.getElementById("logoutBtn").onclick=logout;
+document.getElementById("uploadBtn").onclick=upload;
+document.getElementById("backBtn").onclick=closeDetails;
 
-function deleteDesign(index){
-
-  if(!isOwner) return;
-
-  if(!confirm("Delete this design?")) return;
-
-  designs.splice(index,1);
-
-  localStorage.setItem(
-    "asharDesigns",
-    JSON.stringify(designs)
-  );
-
-  renderDesigns();
-  renderOwnerList();
-
+if(new URLSearchParams(location.search).get("owner")==="ashar"){
+document.getElementById("ownerAccess").style.display="block";
 }
 
-/* START WEBSITE */
-
-checkOwnerMode();
-renderDesigns();
-
+checkSession();
+loadDesigns();
 </script>
-
 </body>
 </html>
